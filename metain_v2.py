@@ -107,19 +107,18 @@ for ifile in image_files:
 
         category_number = category_map.get(category, "")
 
-        print(f"Filename: {ifile.name}")
-        print(f"Title: {title}")
-        print(f"Description: {description}")
-        print(f"Keywords: {keywords}")
-        print(f"Category: {category}")
-        print("--------------------------------------")
+        list_kw = [k.lower().replace('.', '').strip() for k in keywords.split(',')]
+        list_single_kw = []
+        for kw in list_kw:
+            kw_split = kw.split(' ')
+            if len(kw_split) > 1:
+                for kws in kw_split:
+                    list_single_kw.append(kws)
+            else:
+                list_single_kw.append(kw)
 
-        # Delete the image file after writing data to CSV
-        # os.remove(image_file)
-
-        list_keywords = [k.lower().replace('.', '').strip() for k in keywords.split(',')]
-        uniq_keywords = list(set(list_keywords))
-
+        # uniq_keywords = list(set(list_keywords))
+        uniq_keywords = list(set(list_single_kw))
         # img_exif = img.getexif()
         # # Set the EXIF Values Defined at the Top of This Script
         # img_exif[40091] = title.encode('utf16') # Title
@@ -137,6 +136,12 @@ for ifile in image_files:
         info['caption/abstract'] = title.encode('ASCII')
         info['keywords'] = encode_keywords(uniq_keywords, 'ASCII')
         info.save()
+        print(f"Filename: {ifile.name}")
+        print(f"Title: {title}")
+        print(f"Description: {description}")
+        print(f"Keywords: {'; '.join(uniq_keywords)}")
+        print(f"Category: {category}")
+        print("--------------------------------------")
 
         try:
             os.remove(f"{str(ifile)}~")
