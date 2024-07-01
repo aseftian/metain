@@ -1,0 +1,6 @@
+google-generativeai
+pillow
+ipython
+exif
+IPTCInfo3
+piexif
