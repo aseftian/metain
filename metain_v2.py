@@ -51,15 +51,6 @@ categories = {
     21: 'Travel'
 }
 
-# prompt = (
-#     "generate prompt or description (minimum 50 letters, max 99 letters). keywords (max 49 keywords) for submitting this image to a stock photo site. "
-#     "Also provide a category for the image from the following list: "
-#     "Animals, Buildings and Architecture, Business, Drinks, The Environment, States of Mind, Food, "
-#     "Graphic Resources, Hobbies and Leisure, Industry, Landscapes, Lifestyle, People, Plants and Flowers, "
-#     "Culture and Religion, Science, Social Issues, Sports, Technology, Transport, Travel. "
-#     "The response should be in the format: 'Prompt: <prompt>. Keywords: <keywords>. Category: <category>'."
-# )
-
 # Reverse categories dictionary to map category names to numbers
 category_map = {v: k for k, v in categories.items()}
 
@@ -87,20 +78,7 @@ def encode_keywords(dlist, charset):
     return elist
 
 error_files = []
-# prompt = (
-#     "Generate metadata consisting Title, Description, Keywords and Category for the submitted image to the microstock agency. "
-#     "The metadata must be relevant to submit to microstock agency such ase Shutterstock, Adobe Stock, Freepik, etc. "
-#     "Title has a minimum of 50 letters and a maximum of 99 letters. "
-#     "Description has a minimum 50 letters and a maximum of 100 letters. "
-#     # "Keywords has a minimum of 30 keywords and a maximum of 50 keywords, also include the phrases in the title as keywords. Prioritize that each keyword only contains 1 syllable or a maximum of 2 syllables."
-#     "Keywords has a minimum of 30 keywords and a maximum of 50 keywords. Include the phrases in the title as keywords. Each keyword only contains 1 word, but sometimes 2 words would be fine. Avoid to repeat same keyword."
-#     "Provide a category for the image from the following list: "
-#     "[Animals, Buildings and Architecture, Business, Drinks, The Environment, States of Mind, Food, "
-#     "Graphic Resources, Hobbies and Leisure, Industry, Landscapes, Lifestyle, People, Plants and Flowers, "
-#     "Culture and Religion, Science, Social Issues, Sports, Technology, Transport, Travel] "
 
-#     "The response should be in the format: 'Title: <title>. Description: <description>. Keywords: <keywords>. Category: <category>'. "
-# )
 prompt_file = open("config/prompt.conf", "r")
 prompt = prompt_file.read()
 
