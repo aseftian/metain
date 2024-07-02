@@ -2,3 +2,5 @@ venv/
 .venv/
 
 config/metain.conf
+
+sample_image/
