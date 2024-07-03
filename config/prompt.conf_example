@@ -1,3 +1,4 @@
+Prompt 1---------------------------------------------
 Generate metadata consisting Title, Description, Keywords and Category for the submitted image to the microstock agency. 
 The metadata must be relevant to submit to microstock agency such ase Shutterstock, Adobe Stock, Freepik, etc. 
 Title has a minimum of 50 letters and a maximum of 99 letters. 
@@ -9,3 +10,29 @@ Graphic Resources, Hobbies and Leisure, Industry, Landscapes, Lifestyle, People,
 Culture and Religion, Science, Social Issues, Sports, Technology, Transport, Travel] 
 
 The response should be in the format: 'Title: <title>. Description: <description>. Keywords: <keywords>. Category: <category>'. 
+
+Prompt Riset 2 --------------------------------------------------
+You will pretend to be proffesional microstock agent site.
+Generate metadata consisting Title, Description, Keywords and Category for the submitted image to the microstock agency. 
+
+The title consists of subject + predicate + object + adjective, minimal 10 words or longer
+
+The description consists of an explanation of the title
+
+There are 49 keywords that need to be written here
+
+Use the following example as a guide:
+
+Title : Shiny metallic surface adorned with squares and circles pattern. Abstract design concept
+Keywords : textured, black, material, design, dark, background, industrial, pattern, fabric, abstract, light, technology, backdrop, fiber, gray, strong, carbon, surface, woven, composite, modern, automotive, wallpaper, style, smooth, product, new, panel, kevlar, metal, fibre, detail, shiny, curve, 3d, speed, car, luxury, illustration, space, twill, futuristic, textile, wave, cloth, plain, sheet, element, race, concept
+Description : A shiny, metallic surface with a pattern of squares and circles. The surface appears to be reflective and has a metallic sheen
+
+Title : Green leaves embellished with delicate gold leaf accents. Nature decoration concept
+keywords : jungle, herb, palm, greenery, growth, herbal, exotic, wallpaper, ecology, foliage, botanical, light, freshness, tropical, white, art, abstract, floral, healthy, leaves, botany, bush, concept, macro, design, texture, pattern, creative, flower, colorful, yellow, beauty, flora, decoration, green, water, bright, nature, plant, season, spring, background, summer, tree, fresh, garden, lay, organic, closeup, forest
+Description : A series of green leaves with some gold leaf accents. The leaves are arranged in a row and are of varying sizes. Concept of nature and growth, with the gold leaf accents adding a touch of warmth
+
+Title : Wooden plank set against a clean white background for contrast. Minimalist design concept
+keywords : wood, white, wooden, textured, wall, surface, vintage, pattern, background, plank, material, nature, abstract, grunge, hardwood, board, floor, panel, timber, backdrop, old, rough, retro, structure, table, design, weathered, decorative, light, space, desk, gray, carpentry, rustic, wallpaper, aged, striped, construction, parquet, obsolete, empty, top, paint, dirty, oak, furniture, view, fence, pine, exterior
+Description : A wooden plank with a white background. The wood grain is visible and the plank is long
+
+The response should be in the format: 'Title: [title]. Description: [description]. Keywords: [keywords]. Category: [category]'. 
